@@ -1,17 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductCard from "../src/pages/ProductCard";
+import React from "react";
+import AppRouter from "./routes/appRouter";
 
-function App() {
-  return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<ProductCard />}></Route>
-          <Route path="/products/:id" />
-        </Routes>
-      </Router>
-    </>
-  );
-}
+const App = () => {
+  return <AppRouter />;
+};
 
 export default App;

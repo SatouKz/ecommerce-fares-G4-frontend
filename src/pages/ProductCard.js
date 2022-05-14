@@ -17,7 +17,7 @@ const ProductCard = () => {
             "repeat(3,1fr)",
           ]}
         >
-          {products.map((product, index) => (
+          {[products].map((product, index) => (
             <Card key={index} products={product} />
           ))}
         </Box>

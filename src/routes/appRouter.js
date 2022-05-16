@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //y poner el products y en "element" se pone a donde quiero que me lleve la pagina
 import HomePage from "../pages/HomePage";
 import ProductCard from "../pages/ProductCard";
+import productData from "../data/productData";
+import ShowProducts from "../pages/showProducts";
 import NewCategory from "../components/FormCategory";
 const appRouter = () => {
   return (
@@ -12,7 +14,10 @@ const appRouter = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductCard />} />
-          <Route path="/products/:id" element={<ProductCard />} />
+          <Route
+            path="/products/:id"
+            element={<ShowProducts productData={productData} />}
+          />
           <Route path="/formulario/" element={<NewCategory />} />
           <Route path="/about" element={<about />} />
         </Routes>

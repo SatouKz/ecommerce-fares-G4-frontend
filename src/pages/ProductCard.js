@@ -1,28 +1,24 @@
 import React from "react";
+import { Container, Grid } from "@chakra-ui/react";
 import Card from "../components/Card";
-import products from "../assets/products";
-import { Box, Center } from "@chakra-ui/react";
+import productData from "../data/productData";
 
 const ProductCard = () => {
   return (
-    <Box className="container" w={["100%"]}>
-      <Center>
-        <Box
-          mt="1rem"
-          d="grid"
-          gridTemplateColumns={[
-            "repeat(1,1fr)",
-            "repeat(1,1fr)",
-            "repeat(1,1fr)",
-            "repeat(3,1fr)",
-          ]}
-        >
-          {[products].map((product, index) => (
-            <Card key={index} products={product} />
-          ))}
-        </Box>
-      </Center>
-    </Box>
+    <Container p="0" m="0 auto" maxW={"90%"}>
+      <Grid gridTemplateColumns={["repeat(4,1fr)"]} gap="2.9rem">
+        {productData.map((cards) => (
+          <Card
+            key={cards.id}
+            title={cards.title}
+            description={cards.description}
+            price={cards.price}
+            image={cards.image}
+          />
+        ))}
+      </Grid>
+    </Container>
   );
 };
+
 export default ProductCard;

@@ -5,12 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ProductCard from "../pages/ProductCard";
 import NewCategory from "../components/FormCategory";
-export const appRouter = () => {
+const appRouter = () => {
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductCard />} />
           <Route path="/products/:id" element={<ProductCard />} />
           <Route path="/formulario/" element={<NewCategory />} />
           <Route path="/about" element={<about />} />

@@ -7,6 +7,7 @@ import ProductCard from "../pages/ProductCard";
 import productData from "../data/productData";
 import ShowProducts from "../pages/showProducts";
 import NewCategory from "../components/FormCategory";
+import ProductDetails from "../components/ProductDetails";
 const appRouter = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const appRouter = () => {
             path="/products/:id"
             element={<ShowProducts productData={productData} />}
           />
+          <Route path="/products/hola" element={<ProductDetails />} />
           <Route path="/formulario/" element={<NewCategory />} />
           <Route path="/about" element={<about />} />
         </Routes>

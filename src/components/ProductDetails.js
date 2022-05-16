@@ -16,8 +16,8 @@ const ProductDetails = ({ products }) => {
     <Container>
       {products
         // eslint-disable-next-line eqeqeq
-        ?.filter((detail) => detail.id == id)
-        .map((details, index) => (
+        ?.filter((details) => details.id == id)
+        .map((detail, index) => (
           <Box
             className="contenedor"
             key={index}
@@ -34,8 +34,8 @@ const ProductDetails = ({ products }) => {
             <Flex>
               <Box className="product" border="1px solid black ">
                 <Image
-                  src={details.image}
-                  to={`/products/${details.id}`}
+                  src={detail.image}
+                  to={`/products/${detail.id}`}
                   alt="image not found"
                   maxW="20rem"
                   mt="3rem"
@@ -57,11 +57,11 @@ const ProductDetails = ({ products }) => {
                     // fontSize="1.2rem"
                     // textTransform="uppercase"
                   >
-                    {details.title}
+                    {detail.title}
                   </Heading>
                 </Box>
                 <Box className="description">
-                  <Text fontSize="xl">{details.description}</Text>
+                  <Text fontSize="xl">{detail.description}</Text>
                 </Box>
                 <Box className="comprar">
                   <Button size="lg" colorScheme="green" mt="24px">

@@ -8,6 +8,7 @@ import productData from "../data/productData";
 import ShowProducts from "../pages/showProducts";
 import NewCategory from "../components/FormCategory";
 import ProductDetails from "../components/ProductDetails";
+import FormProducts from "../components/FormProducts";
 const appRouter = () => {
   return (
     <>
@@ -20,8 +21,8 @@ const appRouter = () => {
             element={<ShowProducts productData={productData} />}
           />
           <Route path="/products/hola" element={<ProductDetails />} />
-          <Route path="/formulario/" element={<NewCategory />} />
-          <Route path="/about" element={<about />} />
+          <Route path="/form/" element={<NewCategory />} />
+          <Route path="/wasd" element={<FormProducts />} />
         </Routes>
       </Router>
     </>

@@ -9,6 +9,7 @@ import ShowProducts from "../pages/showProducts";
 import NewCategory from "../components/FormCategory";
 import ProductDetails from "../components/ProductDetails";
 import FormProducts from "../components/FormProducts";
+import ContentProduct from "../components/ContentProduct";
 const appRouter = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const appRouter = () => {
           <Route path="/products/hola" element={<ProductDetails />} />
           <Route path="/form/" element={<NewCategory />} />
           <Route path="/wasd" element={<FormProducts />} />
+          <Route path="/sas" element={<ContentProduct />} />
         </Routes>
       </Router>
     </>

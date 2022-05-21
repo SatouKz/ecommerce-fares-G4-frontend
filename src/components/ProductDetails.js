@@ -13,7 +13,10 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { useNumberInput } from "@chakra-ui/react";
-const ProductDetails = ({ products }) => {
+import { useLocation } from "react-router-dom";
+const ProductDetails = () => {
+  const location = useLocation();
+  const { title, description, price, image } = location.state;
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
       step: 1,
@@ -48,7 +51,7 @@ const ProductDetails = ({ products }) => {
           borderBottom="inner"
         >
           <Image
-            src={"https://s.cdnshm.com/products/l/13765354/logitech-g203.jpg"}
+            src={image}
             maxW="300px"
             maxH="300px"
             // border="1px solid black"
@@ -64,13 +67,9 @@ const ProductDetails = ({ products }) => {
           boxShadow="inner"
           mt="1rem"
         >
-          <Heading color="crimson">Producto</Heading>
-          <Text>$99999</Text>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            vel perspiciatis officiis magnam deleniti autem perferendis nisi
-            excepturi quaerat accusantium?
-          </Text>
+          <Heading color="crimson">{title}</Heading>
+          <Text>${price}</Text>
+          <Text>{description}</Text>
           <Divider />
           {/* Cantidades */}
           <VStack my="1rem">

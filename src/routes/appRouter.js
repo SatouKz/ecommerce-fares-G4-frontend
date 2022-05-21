@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ProductCard from "../pages/ProductCard";
 import productData from "../data/productData";
-import ShowProducts from "../pages/showProducts";
+// import ShowProducts from "../pages/showProducts";
 import NewCategory from "../components/FormCategory";
 import ProductDetails from "../components/ProductDetails";
 import FormProducts from "../components/FormProducts";
@@ -19,7 +19,7 @@ const appRouter = () => {
           <Route path="/products" element={<ProductCard />} />
           <Route
             path="/products/:id"
-            element={<ShowProducts productData={productData} />}
+            element={<ProductDetails productData={productData} />}
           />
           <Route path="/products/hola" element={<ProductDetails />} />
           <Route path="/form/" element={<NewCategory />} />

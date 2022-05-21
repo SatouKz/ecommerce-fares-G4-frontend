@@ -8,6 +8,7 @@ const ProductCard = () => {
     <Container p="0" m="0 auto" maxW={"90%"}>
       <Grid gridTemplateColumns={["repeat(4,1fr)"]} gap="2.9rem">
         {productData.map((cards) => (
+          // Ayudita de misa
           <Link
             to={`/products/${cards.id}`}
             key={cards.id}
@@ -18,6 +19,7 @@ const ProductCard = () => {
               image: cards.image,
             }}
           >
+            {/* Ayudita de misa */}
             <Card
               title={cards.title}
               description={cards.description}

@@ -6,13 +6,10 @@ import {
   Box,
   Heading,
   Text,
-  // Flex,
-  // Stack,
   Button,
   VStack,
   HStack,
   Input,
-  // Center,
   Divider,
 } from "@chakra-ui/react";
 import { useNumberInput } from "@chakra-ui/react";
@@ -23,7 +20,6 @@ const ProductDetails = ({ products }) => {
       defaultValue: 1,
       min: 1,
       max: 99,
-      // precision: 2,
     });
 
   const inc = getIncrementButtonProps();

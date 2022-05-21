@@ -49,6 +49,7 @@ const ProductDetails = ({ products }) => {
           maxW="300px"
           borderRadius={"lg"}
           boxShadow="inner"
+          borderBottom="inner"
         >
           <Image
             src={"https://s.cdnshm.com/products/l/13765354/logitech-g203.jpg"}

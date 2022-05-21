@@ -3,7 +3,7 @@ import { Box, Image, Text, Stack, Button, Flex } from "@chakra-ui/react";
 import { BsHeartFill } from "react-icons/bs";
 // import { Link } from "react-router-dom";
 // import { useParams } from "react-router-dom";
-const Card = ({ image, title, description, price, id }) => {
+const Card = ({ image, title, description, price }) => {
   const [state, setState] = useState({ fav: false });
   // let { id } = useParams();
   return (
